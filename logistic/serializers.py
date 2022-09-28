@@ -46,7 +46,6 @@ class StockSerializer(serializers.ModelSerializer):
         # здесь вам надо обновить связанные таблицы
         # в нашем случае: таблицу StockProduct
         # с помощью списка positions
-        positions_instance = instance.positions.all()
 
         for pos in positions:
             obj, created = StockProduct.objects.update_or_create(
